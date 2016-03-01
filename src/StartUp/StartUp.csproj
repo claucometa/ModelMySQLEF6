@@ -95,6 +95,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\NIS.DataAccess.csproj">
+      <Project>{bfdaa3cd-c941-4f2c-aca1-bb2198f10746}</Project>
+      <Name>NIS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\NIS.Domain.csproj">
+      <Project>{146275c3-dcb9-4931-b40d-247c1f3bf453}</Project>
+      <Name>NIS.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

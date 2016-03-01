@@ -10,7 +10,7 @@ namespace NIS.DataAccess.Repo
     public class ViewRepo<T> : IViewRepo<T> where T : class
     {
         public DbSet<T> table;
-        public EletricBillContext db = MyContext.db;
+        public NISContext db = MyContext.db;
 
         public ViewRepo()
         {

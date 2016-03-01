@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NIS.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,14 @@ namespace StartUp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
+            // Define the parameters of your database
+            NISContext.SetDataBaseOptions("localhost", "root", "t5u8y67", "dbSuperTest");
+            
+            // Run this test to see if it works! 
+            var x = MyContext.db.Settings.ToList();
+
+            // If the form opens, it works! Check your database to see if dbSuperTest has been created!
             Application.Run(new Form1());
         }
     }

@@ -4,15 +4,15 @@ using System.Linq;
 
 namespace NIS.DataAccess
 {
-    public class MySqlInitializer : IDatabaseInitializer<EletricBillContext>
+    public class MySqlInitializer : IDatabaseInitializer<NISContext>
     {
-        public void InitializeDatabase(EletricBillContext context)
+        public void InitializeDatabase(NISContext context)
         {
             if (!context.Database.Exists())
             {
                 // if database did not exist before - create it
                 context.Database.Create();
-                EletricBillContext.InitSeed(context);
+                NISContext.InitSeed(context);
             }
             //else
             //{

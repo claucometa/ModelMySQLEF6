@@ -6,7 +6,7 @@ namespace NIS.DataAccess.Migrations
     using MySql.Data.Entity;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EletricBillContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<NISContext>
     {
         public Configuration()
         {
@@ -15,7 +15,7 @@ namespace NIS.DataAccess.Migrations
             SetHistoryContextFactory("MySql.Data.MySqlClient", (conn, schema) => new MySqlHistoryContext(conn, schema));
         }
 
-        protected override void Seed(EletricBillContext context)
+        protected override void Seed(NISContext context)
         {
             // NewImobSysContext.InitSeed(context);
 
