@@ -19,7 +19,7 @@ namespace StartUp
             Application.SetCompatibleTextRenderingDefault(false);
             
             // Define the parameters of your database
-            NISContext.SetDataBaseOptions("localhost", "root", "t5u8y67", "dbSuperTest");
+            NISContext.SetDataBaseOptions("localhost", "root", "", "dbSuperTest");
             
             // Run this test to see if it works! 
             var x = MyContext.db.Settings.ToList();
