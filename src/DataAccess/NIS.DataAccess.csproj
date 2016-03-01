@@ -80,7 +80,6 @@
     <Compile Include="Repo\CrudRepo.cs" />
     <Compile Include="Repo\ICrudRepo.cs" />
     <Compile Include="Repo\ViewRepo.cs" />
-    <Compile Include="Seed.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

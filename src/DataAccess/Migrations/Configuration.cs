@@ -17,7 +17,6 @@ namespace NIS.DataAccess.Migrations
 
         protected override void Seed(NISContext context)
         {
-            // NewImobSysContext.InitSeed(context);
 
             //  This method will be called after migrating to the latest version.
 
