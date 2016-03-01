@@ -1,4 +1,5 @@
 ﻿using NIS.DataAccess;
+using NIS.DataAccess.Repo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,10 @@ namespace StartUp
             
             // Run this test to see if it works! 
             var x = MyContext.db.Settings.ToList();
+
+            // You can create a service by simply using crud
+            var repo = new CrudRepo<NIS.Domain.Models.Setting>();
+            x = repo.GetAll().ToList();
 
             // If the form opens, it works! Check your database to see if dbSuperTest has been created!
             Application.Run(new Form1());
