@@ -1,6 +1,6 @@
 # ModelMySQLEF6
 
-This is what you gonna see in Startup.Program file. The code is self-explanatory.
+This is what you gonna see in the main entrance Startup.Program. The code is self-explanatory.
 
     static void Main()
         {
