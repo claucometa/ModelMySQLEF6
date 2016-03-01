@@ -1,4 +1,4 @@
-# ModelMySQLEF6
+Code First + DDD + MySQL + EF6
 
 This is what you gonna see in the main entrance Startup.Program. The code is self-explanatory.
 
