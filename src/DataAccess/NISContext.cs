@@ -6,12 +6,10 @@ using NIS.Domain.Models.Mapping;
 
 namespace NIS.DataAccess
 {
-    // [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
-    public partial class NISContext : DbContext
+    public class NISContext : DbContext
     {
         static NISContext()
         {
-            // DbConfiguration.SetConfiguration(new MySql.Data.Entity.MySqlEFConfiguration());
             Database.SetInitializer(new MySqlInitializer());
         }
 
@@ -35,24 +33,24 @@ namespace NIS.DataAccess
                 host, user, password, databaseName);
         }
 
+        // Tables
         public DbSet<Setting> Settings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
-
-            modelBuilder.Configurations.Add(new SettingMap());
-
             // Settings
+            modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
             modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
+
+            // Mapping
+            modelBuilder.Configurations.Add(new SettingMap());
 
             base.OnModelCreating(modelBuilder);
         }
 
         public static void InitSeed(NISContext context)
         {
-            //context.Exams.AddOrUpdate(Seed.SeedExams(context));
-            //context.Sinonimos.AddOrUpdate(Seed.SeedSinonyms(context));
+            //context.TableName.AddOrUpdate(Seed.SeedExams(context));
             //context.SaveChanges();            
         }
     }
