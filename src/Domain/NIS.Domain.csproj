@@ -72,13 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.Arduino.datasource" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.Client.datasource" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.Cost.datasource" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.Fatura.datasource" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.FixedCost.datasource" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.Setting.datasource" />
-    <None Include="Properties\DataSources\EletricBill.Domain.Models.Tax.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
